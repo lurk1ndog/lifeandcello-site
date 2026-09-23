@@ -1,0 +1,42 @@
+:root{
+  --bg:#faf7f2; --ink:#2b2622; --muted:#6b625a; --accent:#7a4a2e; --line:#e6ddd1; --card:#fff;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Inter",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.7 var(--sans)}
+img{max-width:100%;display:block}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+header{border-bottom:1px solid var(--line);background:var(--bg);position:sticky;top:0;z-index:5}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:68px;flex-wrap:wrap}
+.brand{font:600 26px/1 var(--serif);color:var(--ink);text-decoration:none;letter-spacing:.3px}
+nav{display:flex;gap:22px;flex-wrap:wrap}
+nav a{color:var(--muted);text-decoration:none;font-size:15px;padding:4px 0;border-bottom:1px solid transparent}
+nav a:hover,nav a[aria-current]{color:var(--ink);border-bottom-color:var(--accent)}
+
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;margin:0 0 .4em}
+h1{font-size:clamp(40px,6vw,64px)}
+h2{font-size:clamp(28px,4vw,38px);margin-top:1.6em}
+.eyebrow{font-size:14px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:64px 0 40px}
+.hero img{border-radius:6px;aspect-ratio:4/5;object-fit:cover;width:100%}
+.lede{font-size:19px;color:var(--muted)}
+.btn{display:inline-block;background:var(--accent);color:#fff;text-decoration:none;padding:12px 26px;border-radius:999px;font-size:15px;margin-top:10px}
+.btn:hover{filter:brightness(1.1)}
+
+.prose{max-width:680px;padding:8px 0 64px}
+.prose p{margin:0 0 1.1em}
+blockquote{margin:0 0 1.4em;padding:0 0 0 20px;border-left:2px solid var(--accent);font:italic 24px/1.4 var(--serif);color:var(--ink)}
+blockquote cite{display:block;font:normal 14px/1.5 var(--sans);color:var(--muted);margin-top:8px}
+
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+@media (max-width:760px){
+  .hero{grid-template-columns:1fr;gap:28px;padding:36px 0 20px}
+  .hero img{aspect-ratio:4/3}
+  nav{gap:16px}
+}
